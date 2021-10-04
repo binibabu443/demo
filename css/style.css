@@ -1,0 +1,450 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+	font-family: 'Montserrat', sans-serif;
+} 
+
+.fa, .far, .fas , .fab {
+    font-family: "Font Awesome 5 Free";
+}
+h1{
+	font-size: 48px;
+}
+h2{
+	font-size: 38px;
+}
+h3{
+	font-size: 35px;
+}
+h4{
+	font-size: 20px;
+}
+p{
+	font-size: 14px;
+	line-height: 26px;
+}
+.main-menu {
+    background: #17171c;
+	height: 90px;
+	z-index : 9999;
+}
+.main-menu ul {
+    margin-left: auto;
+    margin-right: auto;
+    list-style: none;
+    display: flex;
+	margin-top: 15px;
+	text-transform : uppercase;
+}
+
+.main-menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    padding: 0px 20px;
+    position: relative;
+}
+.logo-brand a {
+    position: absolute !important;
+background: #17171c;
+border-radius: 50%;
+width: 135px !important;
+height: 135px !important;
+line-height: 135px;
+top: -50px;
+}
+.logo-brand{
+	width: 130px;
+background: #17171c;
+position: relative;
+
+}
+
+
+
+
+
+
+.banner {
+position: absolute;
+    top: calc(50% - 60px);
+    
+    text-align: left;
+    margin: 20px;
+    left: 80px;
+	
+}
+.banner h1 {
+    font-size: 48px;
+    font-weight: 300;
+}
+.banner .btn {
+       padding: 8px 25px;
+    font-size: 20px;
+  
+    margin-top: 20px;
+}
+.banner_img{
+	background-image : url(../img/banner.jpg);
+	    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    height: calc(100vh - 90px);
+	/*background-size : cover;
+	object-fit : cover;*/
+	
+	width : 100%;
+	background-repeat: no-repeat;
+}
+
+.banner button{
+	border-radius : 0px;
+}
+.bg-gray{
+	background:#ededed;
+}
+
+
+.about h3 , .process h3 {
+	text-align: center;
+padding-bottom: 45px;
+
+font-weight: 300;
+	
+}
+
+.about p , .process p {
+	padding: 0px 150px;
+	text-align : center;	
+	line-height : 26px;
+	font-weight: 200;
+	margin-bottom: 0px;
+}
+
+.box{
+	background-color: #17171c;
+color: white;
+padding: 80px 130px;
+	
+	
+}
+.box-wrap{
+	padding: 10px 100px;
+}
+.arrange{
+	width : auto;
+	height : 2px;
+	
+}
+
+.mb-20{
+	margin-bottom: 20px;
+}
+
+.who {
+	
+	text-align: justify;
+padding: 65px 200px 40px 65px;
+line-height: 30px;
+	
+}
+
+
+.who_img{
+    background-image: url(../img/who.jpg);
+    background-repeat: no-repeat;
+    margin: 0px;
+height: 600px;
+    background-size: cover;
+}
+
+.who p {
+	padding-bottom : 40px;
+}
+.who us{
+	padding-bottom : 20px;
+}
+.who h1 {
+    font-size: 35px;
+	    font-weight: 300;
+}
+.process h3 {
+	text-align : center;
+	padding : 20px;
+	font-weight: 300;
+}
+
+/*.process p {
+	text-align : center;
+	line-height : 30px;	
+	font-weight: 200; 
+}*/
+
+.sub-box{
+	padding: 20px 0px;
+    
+    text-align: center;
+    line-height: 20px;
+    font-weight: 200;
+    font-size: 12px;
+	
+	
+}
+
+.sub-box img{
+	margin-bottom : 30px;
+}
+
+
+.sub-box h4{
+	font-weight: 300;
+}
+
+.border_box{
+	border: solid 2px #8d6155;
+padding: 30px 5px;
+margin-top: 65px;
+height: 280px;
+width: 300px;
+	
+}
+.mb-20 img {
+    margin-right: 16px;
+}
+.sub-box p {
+    font-size: 12px;
+    line-height:28px;
+}
+.service-wrp{
+text-align: justify;
+padding: 55px 0px 55px 80px;
+
+	
+}
+.service {
+    padding: 90px 70px 90px 0px;
+}
+.service h1 {
+    font-weight: 300;
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+.service p {
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 200;
+}
+.wrap {
+    width: 100%;
+    height: 300px;
+	position : relative;
+	
+}
+.wrap img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+	
+	
+}
+
+.item_img h4{
+	position: absolute;
+    bottom: 0px;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+}
+.slide-txt {
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+   
+    color: #fff;
+    width: 100%;
+ 
+    background: rgb(2,0,36);
+    background: linear-gradient(
+0deg
+, rgb(2 0 36 / 22%) 0%, rgb(0 0 4) 9%, rgb(205 206 210 / 10%) 100%);
+}
+
+.slide-txt h4 {
+    font-size: 18px;
+    width: 100%;
+}
+.owl-carousel .owl-dots.disabled {
+    display: block !important;
+}
+.owl-theme .owl-dots, .owl-theme .owl-nav {
+    text-align: left !important;
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+.text{
+	
+	background-image : url(../img/kerala.jpg);
+	text-align : center;
+	padding : 20px;
+	height : calc(100vh - 90px);
+	width : 100%;
+	object-fit: cover;
+	padding-top : 250px;
+	color: white;
+	background-repeat: no-repeat;
+	background-size : cover;
+	
+	
+}
+
+.text h3{
+	font-weight : 300;
+}
+
+
+.text button {
+	color: white;	
+	padding : 10px 37px;
+	margin : 45px;
+	font-size: 22px;
+	border : solid 1px #8d6155;
+	border-radius : 0px;
+	background : transparent;
+}
+.text button:hover {
+    color: #fff;
+    background: #8d6155;
+}
+footer .sub-box {
+    font-weight: 500;
+    padding: 0px;
+}
+footer ul {
+    padding: 0px;
+}
+footer h4 {
+    font-weight: 600 !important;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.sub-box ul li {
+    margin-bottom: 10px;
+}
+.none ul{
+	list-style-type : none;
+	text-align : left;
+}
+
+
+.box_bottom{
+	background-color : #14141f;
+	color: white;
+	padding: 90px 120px;
+	margin : 0px;
+	border-bottom : solid 1px #554e69;
+	
+}
+
+ .social ul li img{
+	width: 20px;
+    height: 20px;
+    margin: 12px;
+    text-align: left;
+} 
+ 
+ .social ul {
+	list-style-type : none;
+	display: flex;
+} 
+
+
+.footer{
+	padding: 40px;
+background-color: #141414;
+text-align: center;
+color: white;
+font-size: 12px;
+}
+
+.footer a {
+	color : #4e7de0;
+	text-decoration : none;
+	
+	}
+
+ .mob-menu{
+ 	display: none;
+ }
+
+/*mobile view*/
+@media (max-width: 992px) {
+.mob-menu{
+ 	display: block;
+ }
+	.border_box{
+		width: auto;
+	}
+	.logo-brand{
+		display: none;
+	}
+	.main-menu li{
+		padding: 10px 0px;
+	}
+	.banner h1 {
+    font-size: 36px;
+}
+.box {
+    padding: 80px 50px;
+}
+.about p , .process p{
+    padding: 0px;
+}
+.box-wrap {
+    padding: 0;
+}
+.who {
+	
+	text-align: justify;
+padding: 65px ;
+line-height: 30px;
+	
+}
+.service-wrp {
+    text-align: justify;
+    padding: 55px;
+}
+.text h3 {
+    font-size: 25px;
+}
+		.main-menu .navbar-collapse ul {
+    display: block;
+position: absolute;
+background: #17171c;
+width: 100%;
+margin: 0;
+padding: 15px;
+left: 0;
+top: 82px;
+}
+}
+
+@media (max-width: 762px){
+
+	.banner h1 {
+    font-size: 16px;
+    font-weight: 300;
+}
+.banner {
+	    left: 0;
+	    top: 150px;
+}	
+.banner .btn {
+
+    font-size: 11px;
+   
+}
+.banner_img , .ban{
+	height: 250px;
+}
+
+}

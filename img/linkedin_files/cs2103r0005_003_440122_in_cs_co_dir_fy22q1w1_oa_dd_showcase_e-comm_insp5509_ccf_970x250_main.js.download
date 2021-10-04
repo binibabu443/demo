@@ -1,0 +1,79 @@
+var banner = document.getElementById('banner');
+var legal = document.getElementById('roll-cta');
+var replay = document.getElementById('replay');
+
+TweenMax.set(".product_f3", {autoAlpha:0, filter:"blur(10px)",  x:150, y:0});
+TweenMax.set(".product_f4", {autoAlpha:0, filter:"blur(10px)",  x:150, y:0});
+TweenMax.set(".product_f5", {autoAlpha:0, filter:"blur(10px)",  x:150, y:0});
+
+var tl = new TimelineMax({repeat:0, repeatDelay:0});
+// var .set(element, {vars})
+
+window.onload = function() {   
+  
+tl.set(banner, {visibility: "visible"}).timeScale(1)
+
+	/*frame one*/	
+	.add("frame1")
+	.from(".bg, .dell-logo,.cta,.vendor-logo, .funding", .3, {alpha:0, ease:Linear.easeIn}, "frame1")
+	.staggerTo(".headingf1,.title-1_1,.title-1_2", 1, {clip:"rect(0px,500px,100px,0px)", x:10, ease:Expo.easeInOut},0.2, "frame1")
+	.staggerTo(".headingf1,.title-1_1,.title-1_2", .5, {clip:"rect(0px,0px,100px,0px)", x:-10, ease:Expo.easeIn},0.1, "frame1+=2.5")
+	.to(".dell-logo,.vendor-logo, .funding", .5, {alpha:0, filter:"blur(5px)", force3D:true, rotation:0.01,  ease:Power4.easeOut}, "frame1+=2.5")
+	
+	/*frame two*/
+	.add("frame2","frame1+=3")
+	.from(".product_f2", .3, {alpha:1, y:-250, ease:Linear.easeIn}, "frame2")
+	.from(".f2_shape,.pname_des,.pnamef2", .3, {alpha:0, ease:Linear.easeIn}, "frame2+=.5")	
+	.to(".product_f2", .3, {alpha:1, y:-250, ease:Linear.easeIn}, "frame2+=2.7")	
+	.from(".f2_shape,.pname_des,.pnamef2", .3, {alpha:0, ease:Linear.easeIn}, "frame2+=2.7")		
+
+
+	/*frame three*/
+	.add("frame3","frame2+=2.75")
+	.from(".pnamef3", .3, {alpha:0, ease:Linear.easeIn}, "frame3+=.7")
+	.to(".product_f3", .5, {x:0, y:0, autoAlpha:1, filter:"blur(1px)", scale:1, transformOrigin:"20% 90%", force3D:true, rotation:0.01, ease:SlowMo.ease.config(0.9, 0.0, false)}, "frame3")
+	.to(".product_f3" , .3, {filter:"blur(0px)", force3D:true, rotation:0.01, ease:SlowMo.ease.config(0.1, 0.1, false)}, "frame3+=.2")
+	.from(".f3_shape,.pname_des_f3,.pnamef3", .3, {alpha:0, ease:Linear.easeIn}, "frame3+=.5")		
+	.to(".product_f3,.f3_shape,.pname_des_f3,.pnamef3", 1.5, {alpha:0, x:300, filter:"blur(5px)", force3D:true, rotation:0.01,  ease:Power4.easeOut}, "frame3+=2.5")
+
+	/*frame four*/
+	.add("frame4","frame3+=2.75")	
+	.from(".product_f4", .3, {alpha:1, x:300, ease:Linear.easeIn}, "frame4")	
+	.to(".product_f4", .5, {x:0, y:0, autoAlpha:1, filter:"blur(5px)", transformOrigin:"50% 50%", force3D:true, rotation:0.01, ease:SlowMo.ease.config(0.9, 0.0, false)}, "frame4")
+	.to(".product_f4" , .3, {filter:"blur(0px)", force3D:true, rotation:0.01, ease:SlowMo.ease.config(0.1, 0.1, false)}, "frame4+=.2")
+	.from(".f4_shape,.pname_des_f4,.pnamef4", .3, {alpha:0, ease:Linear.easeIn}, "frame4+=.7")
+	.to(".f4_shape,.product_f4,.pname_des_f4,.pnamef4", 1.5, {alpha:0, x:300, filter:"blur(5px)", force3D:true, rotation:0.01,  ease:Power4.easeOut}, "frame4+=2.5")
+
+	/*frame five*/
+	.add("frame5","frame4+=2.5")
+	.to(".dell-logo,.vendor-logo, .funding", .5, {alpha:1, filter:"blur(0px)", force3D:true, rotation:0.01,  ease:Power4.easeOut}, "frame5")
+	.staggerTo(".headingf5,.title-5_1", 1, {clip:"rect(-100px,500px,70px,0px)", x:10, ease:Expo.easeInOut},0.2, "frame5")
+
+	/*roll over*/
+	.from("#roll-cta", .5, {alpha:0, x:-300, ease:Power4.easeout}, "frame5")
+	.from("#rolltext", .5, {alpha:0, ease:Power4.easeout}, "frame5")
+	.from("#legal-text", .5, {alpha:0, ease:Power4.easeout}, "frame5")
+	.to(".replay", .3, {autoAlpha:1, visibility: "visible", display:'block', ease: Sine.easeOut})
+
+	legal.addEventListener("mouseover",legalHover);
+	function legalHover(){
+		tl.pause();
+		TweenMax.to("#legal", .5, {top:0, ease:Power1.easeOut})  
+	}
+
+	legal.addEventListener("mouseout",legalOut);
+	function legalOut(){
+		tl.play();
+		TweenMax.to("#legal", .5, {top:-1000, ease:Power1.easeIn})
+	}
+
+	  //----- Reply ------
+      replay.addEventListener("click", function(){
+          tl.restart();
+      });
+    
+    // tl.seek("loop")
+
+    var currentDuration = tl.duration();
+    console.log(currentDuration);   
+};
